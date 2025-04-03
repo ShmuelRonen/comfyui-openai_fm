@@ -1,0 +1,354 @@
+{
+  "id": "7a8da134-3a9f-40f0-8c29-94d804405dc3",
+  "revision": 0,
+  "last_node_id": 15,
+  "last_link_id": 15,
+  "nodes": [
+    {
+      "id": 15,
+      "type": "Reroute",
+      "pos": [
+        2509.828857421875,
+        4467.46875
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 14
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "AUDIO",
+          "links": [
+            15
+          ]
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false
+      }
+    },
+    {
+      "id": 4,
+      "type": "FreeVC Voice Conversion",
+      "pos": [
+        2663.234130859375,
+        4490.001953125
+      ],
+      "size": [
+        317.4000244140625,
+        218
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "source_audio",
+          "type": "AUDIO",
+          "link": 15
+        },
+        {
+          "name": "reference_audio",
+          "type": "AUDIO",
+          "link": 4
+        },
+        {
+          "name": "secondary_reference",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            5
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "FreeVC Voice Conversion"
+      },
+      "widgets_values": [
+        "FreeVC (24kHz)",
+        0.5,
+        0.4,
+        0.7,
+        true,
+        0.95
+      ]
+    },
+    {
+      "id": 5,
+      "type": "LoadAudio",
+      "pos": [
+        2665.828857421875,
+        4758.298828125
+      ],
+      "size": [
+        315,
+        136
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            4
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.26",
+        "Node name for S&R": "LoadAudio"
+      },
+      "widgets_values": [
+        "boy.flac",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": 14,
+      "type": "String Literal",
+      "pos": [
+        1502.427490234375,
+        4268.7685546875
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            11
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "image-saver",
+        "ver": "65e6903eff274a50f8b5cd768f0f96baf37baea1",
+        "Node name for S&R": "String Literal"
+      },
+      "widgets_values": [
+        "נערה ישראלית תל אביבית עם מבטא עירוני צווחני."
+      ]
+    },
+    {
+      "id": 12,
+      "type": "OpenAIFMNode",
+      "pos": [
+        1982.9593505859375,
+        4247.125
+      ],
+      "size": [
+        417.34619140625,
+        292.0586242675781
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "user_vibe",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "user_vibe"
+          },
+          "link": 11
+        }
+      ],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            12,
+            14
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-openai-fm",
+        "ver": "1.0.2",
+        "Node name for S&R": "OpenAIFMNode"
+      },
+      "widgets_values": [
+        "הלכתי בדרך לים... פתאום אני רוֹאָהּ את הפצ'חולה הזו מירב, מפגינה ביטחון עצמי מולי. הסתכלתי בה במבט קר ואמרתי \"את פחות מלכה ממה שאת חושבת\" \"קפיש?\"",
+        "Sage",
+        "Calm",
+        "None"
+      ]
+    },
+    {
+      "id": 2,
+      "type": "PreviewAudio",
+      "pos": [
+        2487.391357421875,
+        4247.37451171875
+      ],
+      "size": [
+        315,
+        88
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 12
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.26",
+        "Node name for S&R": "PreviewAudio"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 6,
+      "type": "PreviewAudio",
+      "pos": [
+        3029.921630859375,
+        4487.56689453125
+      ],
+      "size": [
+        315,
+        88
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 5
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.26",
+        "Node name for S&R": "PreviewAudio"
+      },
+      "widgets_values": [
+        ""
+      ]
+    }
+  ],
+  "links": [
+    [
+      4,
+      5,
+      0,
+      4,
+      1,
+      "AUDIO"
+    ],
+    [
+      5,
+      4,
+      0,
+      6,
+      0,
+      "AUDIO"
+    ],
+    [
+      11,
+      14,
+      0,
+      12,
+      0,
+      "STRING"
+    ],
+    [
+      12,
+      12,
+      0,
+      2,
+      0,
+      "AUDIO"
+    ],
+    [
+      14,
+      12,
+      0,
+      15,
+      0,
+      "*"
+    ],
+    [
+      15,
+      15,
+      0,
+      4,
+      0,
+      "AUDIO"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "Free VC",
+      "bounding": [
+        2483.71044921875,
+        4404.32763671875,
+        920.2200317382812,
+        548.7064208984375
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 1.0610764609500007,
+      "offset": [
+        -1422.7102379039154,
+        -4087.6221298307696
+      ]
+    },
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true,
+    "ue_links": []
+  },
+  "version": 0.4
+}
