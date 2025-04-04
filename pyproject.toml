@@ -1,0 +1,15 @@
+[project]
+name = "openai_fm"
+description = "A custom node for ComfyUI that integrates OpenAI last T2S capabilities for free"
+version = "1.0.0"
+license = {file = "LICENSE"}
+dependencies = ["requests>=2.26.0", "torch", "torchaudio"]
+
+[project.urls]
+Repository = "https://github.com/ShmuelRonen/comfyui-openai_fm"
+#  Used by Comfy Registry https://comfyregistry.org
+
+[tool.comfy]
+PublisherId = ""
+DisplayName = "comfyui-openai_fm"
+Icon = ""
